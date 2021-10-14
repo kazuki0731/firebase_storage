@@ -1,12 +1,8 @@
-import { LinearProgress, Typography } from "@material-ui/core";
-import { Box } from "@mui/system";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { ref, getDownloadURL } from "firebase/storage";
 
 export const DownloadTest = () => {
-  const [image, setImage] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [error, setError] = useState("");
 
